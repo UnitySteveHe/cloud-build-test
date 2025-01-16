@@ -1,4 +1,0 @@
-repository "cloud-build-test@UnitySteveHe@cloud"
-  path "/"
-    br "/main"
-    co "/main"
