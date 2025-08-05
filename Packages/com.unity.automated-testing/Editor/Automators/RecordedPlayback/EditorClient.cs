@@ -128,7 +128,7 @@ namespace Unity.CloudTesting.Editor
             {
                 var payload = JsonUtility.ToJson(new UploadInfo(Path.GetFileName(path)));
 
-                using (var webrx = UnityWebRequest.Post(url, payload))
+                using (var webrx = UnityWebRequest.PostWwwForm(url, payload))
                 {
                     webrx.SetRequestHeader("Content-Type", "application/json");
                     webrx.SetRequestHeader("Authorization", "Bearer " + CloudProjectSettings.accessToken);

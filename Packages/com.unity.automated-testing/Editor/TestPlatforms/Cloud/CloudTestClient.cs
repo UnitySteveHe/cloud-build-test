@@ -49,7 +49,7 @@ namespace TestPlatforms.Cloud
             UploadHandlerRaw uH = new UploadHandlerRaw(payload);
             uH.contentType = "application/json";
 
-            using (var uwr = UnityWebRequest.Post(url, data))
+            using (var uwr = UnityWebRequest.PostWwwForm(url, data))
             {
                 uwr.uploadHandler = uH;
                 uwr.SetRequestHeader("Authorization", "Bearer " + accessToken);
